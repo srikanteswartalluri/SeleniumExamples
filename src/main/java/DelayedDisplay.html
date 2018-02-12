@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Delayed Display</title>
+    <style type="text/css">
+        <!--
+
+        .hide{
+            display:none;
+        }
+        .show{
+            display:block;
+            position:absolute;
+            left: 200px;
+            top: 200px;
+            color: blue;
+        }
+        .myshow{
+            display:block;
+            position:absolute;
+            left: 300px;
+            top: 300px;
+            color: blue;
+        }
+
+        -->
+    </style>
+    <script type="text/javascript" language="javascript">
+        <!-- Hide from browsers without javascript
+
+        window.onload=function()  //executes when the page finishes loading
+        {
+            setTimeout(func1, 2000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+
+        };
+        function func1()
+        {
+            document.getElementById("my_div").className="show";
+            document.getElementById("mybutton").classList="myshow";
+        }
+
+        // End hiding -->
+    </script>
+</head>
+<body>
+
+<div>main page</div>
+<div id="my_div" class="hide">some text</div>
+<button id="mybutton" class="hide">click me</button>
+</body>
+</html>

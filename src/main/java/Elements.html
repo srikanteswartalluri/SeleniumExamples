@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elements</title>
+</head>
+<body>
+
+<div>
+<a href="http://www.amazon.com" target="_blank">Visit amazon.com!</a>
+<a href="http://www.google.com" target="_blank">Visit google.com!</a>
+<a href="http://www.yahoo.com" target="_blank">Visit yahoo.com!</a>
+<a href="http://www.rediff.com" target="_blank">Visit rediff.com!</a>
+</div>
+<button type="button" id="btn" disabled onclick="alert('Hello world!')">Click Me!</button>
+<button type="button"  id="btn2" onclick="alert('Hello world!')">Click Me!</button>
+
+<textarea rows="4" cols="50">
+
+</textarea>
+
+<form>
+    First name:<br>
+    <input disabled type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+<form>
+    <input disabled type="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other
+</form>
+
+<form >
+    <label disabled for="male">Male</label>
+    <input type="radio" name="gender" id="male" value="male"><br>
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="female" value="female"><br>
+    <label for="other">Other</label>
+    <input type="radio" name="gender" id="other" value="other"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<form action="">
+    <input type="checkbox" name="vehicle" value="Bike" >I have a bike<br>
+    <input disabled type="checkbox" name="vehicle" value="Car" checked>I have a car
+</form>
+
+<div><select name="dpdownsingle" >
+    <option value="empty">None</option>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+</select>
+</div>
+<div>
+<select name="dpdwn" size="5"  autofocus multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab" selected>Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+</select>
+</div>
+
+</body>
+</html>
