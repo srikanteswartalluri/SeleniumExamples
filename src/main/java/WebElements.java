@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class WebElements {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/Users/stalluri/Downloads/chromedriver");
         ChromeDriver cd = new ChromeDriver();
         //open Elements.html on chrome
@@ -53,6 +53,41 @@ public class WebElements {
 
         sDList.selectByVisibleText("Audi");
         System.out.println("Is Multiple or not: " + sDList.isMultiple());
+
+        Select multiSelect = new Select(cd.findElement(By.name("dpdwn")));
+        System.out.println("Is Multiple select or not: " + multiSelect.isMultiple());
+
+        multiSelect.selectByVisibleText("Opel");
+
+        Thread.sleep(3000);
+
+        multiSelect.selectByValue("volvo");
+
+        Thread.sleep(2000);
+
+        multiSelect.deselectAll();
+
+        multiSelect.deselectByVisibleText("Opel");
+
+        Thread.sleep(2000);
+
+        multiSelect.selectByIndex(0);
+        multiSelect.selectByIndex(3);
+        Thread.sleep(2000);
+
+        List<WebElement> selected = multiSelect.getAllSelectedOptions();
+
+        for(WebElement w: selected){
+            System.out.println("Option selected: " + w.getText());
+        }
+
+        System.out.println("First selected option" + multiSelect.getFirstSelectedOption().getText());
+
+
+
+
+
+
 
 
 
