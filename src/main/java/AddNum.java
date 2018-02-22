@@ -7,9 +7,9 @@
  * <b>Note:</b> Giving proper comments in your program makes it more
  * user friendly and it is assumed as a high quality code.
  *
- * @author  Zara Ali
+ * @author  FirstName Lastname
  * @version 1.0
- * @since   2014-03-31
+ *
  */
 public class AddNum {
     /**
@@ -18,8 +18,6 @@ public class AddNum {
      * show the usage of various javadoc Tags.
      * {@code int addNum(int numA, int numB){}}
      * @deprecated
-     * @exception InterruptedException adsf
-     * @see InterruptedException
      * @param numA This is the first paramter to addNum method
      * @param numB  This is the second parameter to addNum method
      * @return int This returns sum of numA and numB.
