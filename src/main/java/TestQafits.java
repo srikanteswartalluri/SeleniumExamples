@@ -26,15 +26,15 @@ public class TestQafits {
     @BeforeMethod
     public void setupTest(){
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(400, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(400, TimeUnit.SECONDS);
         driver.get("http://fits.qauber.com/#/page/login");
         WebElement userName = driver.findElement(By.name("account_email"));
         WebElement password = driver.findElement(By.name("account_password"));
         //Thread.sleep(2000);
-        WebDriverWait wait = new WebDriverWait(driver, 500);
-        wait.until(ExpectedConditions.elementToBeClickable(userName)).sendKeys("talluri.work@gmail.com");
-        wait.until(ExpectedConditions.elementToBeClickable(password));
+        //WebDriverWait wait = new WebDriverWait(driver, 500);
+       // wait.until(ExpectedConditions.elementToBeClickable(userName)).sendKeys("talluri.work@gmail.com");
+        //wait.until(ExpectedConditions.elementToBeClickable(password));
 //        userName.sendKeys("talluri.work@gmail.com");
         password.sendKeys("qauber");
         password.submit();

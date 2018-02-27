@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import javax.swing.text.html.HTMLDocument;
+import java.util.Iterator;
 import java.util.Set;
 
 public class PopUpHandling {
@@ -24,16 +26,28 @@ public class PopUpHandling {
         //title still shows the title of parent window
         System.out.println("Parent page Title: " + cd.getTitle());
 
-        for(String s: wHandles){
+        Iterator<String> itr = wHandles.iterator();
+        while(itr.hasNext()){
+            String s = itr.next();
             System.out.println(s);
             if(!s.equals(parentWindowHandle)){
-                System.out.println("Child Window Hand: " + s);
+                System.out.println("Child Window Handle: " + s);
                 //switching to child window and now driver controls the child
                 //window
                 cd.switchTo().window(s);
                 System.out.println("Child Window Title: " + cd.getTitle());
             }
         }
+//        for(String s: wHandles){
+//            System.out.println(s);
+//            if(!s.equals(parentWindowHandle)){
+//                System.out.println("Child Window Hand: " + s);
+//                //switching to child window and now driver controls the child
+//                //window
+//                cd.switchTo().window(s);
+//                System.out.println("Child Window Title: " + cd.getTitle());
+//            }
+//        }
         cd.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("shoes");
         cd.findElement(By.xpath("//*[@id=\"nav-search\"]/form/div[2]/div/input")).click();
         Thread.sleep(3000);
